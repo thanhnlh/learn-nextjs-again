@@ -112,10 +112,19 @@ public class LoginRequest
 /// <summary>
 /// POST /api/auth/login
 /// Authenticate user and return JWT token
+/// 
+/// WARNING: This is a DEMO implementation for tutorial purposes only!
+/// In production:
+/// - Never use hardcoded credentials
+/// - Hash passwords with BCrypt/Argon2
+/// - Store credentials in a secure database
+/// - Implement rate limiting
+/// - Add CAPTCHA for brute force protection
 /// </summary>
 app.MapPost("/api/auth/login", (LoginRequest request) =>
 {
-    // Mock user validation (in production, check against database with hashed passwords)
+    // TUTORIAL DEMO ONLY: Mock user validation
+    // In production, check against database with hashed passwords and constant-time comparison
     if (request.Username == "demo" && request.Password == "demo123")
     {
         var token = GenerateJwtToken(request.Username, "1", jwtSecret, jwtIssuer, jwtAudience);

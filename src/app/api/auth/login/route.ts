@@ -2,21 +2,26 @@
  * Mock Login API Route
  * POST /api/auth/login
  * 
+ * ⚠️ WARNING: TUTORIAL/DEMO CODE ONLY - NOT FOR PRODUCTION USE ⚠️
+ * 
  * This is a simplified authentication example for demonstration.
- * In production, you would:
- * - Verify credentials against a database
- * - Hash passwords using bcrypt
- * - Implement rate limiting
+ * In production, you MUST:
+ * - Verify credentials against a secure database
+ * - Hash passwords using bcrypt/argon2 with salt
+ * - Implement rate limiting to prevent brute force attacks
  * - Use HTTP-only cookies instead of sending tokens in response
  * - Add CSRF protection
+ * - Use constant-time comparison for passwords
+ * - Implement account lockout after failed attempts
  */
 import { NextResponse } from 'next/server';
 import { loginSchema } from '@/lib/validation';
 import { signToken } from '@/lib/jwt';
 
-// Mock user database (in production, use a real database)
+// TUTORIAL DEMO ONLY: Mock user database
+// WARNING: Never store plain-text passwords in production!
 const MOCK_USERS = [
-  { id: '1', username: 'demo', password: 'demo123' }, // Never store plain-text passwords!
+  { id: '1', username: 'demo', password: 'demo123' },
   { id: '2', username: 'testuser', password: 'test123' },
 ];
 
