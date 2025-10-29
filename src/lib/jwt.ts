@@ -26,8 +26,8 @@ export interface JWTPayload {
  * @param expiresIn - Token expiration time (default: 1 hour)
  * @returns Signed JWT token string
  */
-export function signToken(payload: Omit<JWTPayload, 'iat' | 'exp'>, expiresIn: string | number = '1h'): string {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn } as jwt.SignOptions);
+export function signToken(payload: Omit<JWTPayload, 'iat' | 'exp'>, expiresIn: jwt.SignOptions['expiresIn'] = '1h'): string {
+  return jwt.sign(payload, JWT_SECRET, { expiresIn });
 }
 
 /**
