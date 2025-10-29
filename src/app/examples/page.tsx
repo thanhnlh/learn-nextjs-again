@@ -145,7 +145,7 @@ export default function ExamplesPage() {
         <section className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">4. Client Components</h2>
           <p className="mb-4">
-            This entire page is a Client Component (uses &apos;use client&apos; directive) 
+            This entire page is a Client Component (uses &quot;use client&quot; directive) 
             because it has interactive state and event handlers.
           </p>
           <Counter />

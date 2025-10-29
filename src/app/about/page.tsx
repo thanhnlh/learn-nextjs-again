@@ -20,7 +20,7 @@ export default function AboutPage() {
       </p>
       <h2 className="text-2xl font-bold mb-2 mt-8">Static Metadata</h2>
       <p className="text-lg">
-        Notice how we&apos;ve added metadata to this page using the <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">metadata</code> export. 
+        Notice how we have added metadata to this page using the <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">metadata</code> export. 
         This helps with SEO and social sharing.
       </p>
     </div>
