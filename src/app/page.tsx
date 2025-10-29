@@ -59,7 +59,7 @@ export default function Home() {
         {/* Quick Links */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-center">Explore the Project</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             <Link 
               href="/about"
               className="block border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors text-center"
@@ -90,6 +90,17 @@ export default function Home() {
               <h3 className="font-bold mb-2">Examples</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Interactive feature demos
+              </p>
+            </Link>
+
+            <Link 
+              href="/tutorial"
+              className="block border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors text-center"
+            >
+              <div className="text-3xl mb-2">🎓</div>
+              <h3 className="font-bold mb-2">Tutorial</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Zod + React Hooks + JWT Auth
               </p>
             </Link>
           </div>
